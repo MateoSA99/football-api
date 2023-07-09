@@ -20,3 +20,11 @@ class TeamsPerCountryViewSet(viewsets.ModelViewSet):
 class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
+
+class PlayersByTeamViewSet(viewsets.ModelViewSet):
+    serializer_class = PlayerSerializer
+
+    def get_queryset(self):
+        team_id = self.kwargs['team_id']
+        queryset = Player.objects.filter(team_id = team_id)
+        return queryset
