@@ -15,6 +15,28 @@ from .serializers import TeamSerializer, PlayerSerializer, UserSerializer
 
 @api_view(['POST'])
 def Login(request):
+    """This function allows the user to log in to the api 
+    and get the token, for this it is necessary to go to 
+    football/login and make a post request with the username and password
+
+    Then copy the token and go to the authentication section 
+    (if you are looking at the api docs) select Token, then 
+    in scheme write token and then paste the token.
+
+    If you make the request from postman make sure that in the headers you 
+    pass the information as follows:
+        Authorization Token <mytoken>
+        note: the space between Token and <mytoken>
+
+
+    This will allow you to navigate the API
+
+    Args:
+        request (_HTTP): a http request
+
+    Returns:
+        _type_: a response with the token and the user
+    """
     user = get_object_or_404(User, username=request.data['username'])
     if not user.check_password(request.data['password']):
         return Response({'detail': 'Wrong Password'}, status=status.HTTP_400_BAD_REQUEST)
@@ -25,6 +47,17 @@ def Login(request):
 
 @api_view(['POST'])
 def Signup(request):
+    """To register in the api please make a post request to football/signup 
+       with the following fields: username, password and email.
+
+       This will return your authorization token, after that please login at football/login
+
+    Args:
+        request (HTTP): a http request
+
+    Returns:
+        _type_: authorization token
+    """
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
