@@ -145,10 +145,10 @@ CELERY_TIMEZONE = 'America/Bogota'
 
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 #add your host of the email here in this case its Gmail so we are going to use Gmail host
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_USE_TLS = True
 #add the port number of the email server
-EMAIL_PORT = 587
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
 #add your gamil here
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER ')
 #add your password here
