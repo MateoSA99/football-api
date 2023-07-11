@@ -17,7 +17,7 @@ from .serializers import TeamSerializer, PlayerSerializer, UserSerializer
 def Login(request):
     """This function allows the user to log in to the api 
     and get the token, for this it is necessary to go to 
-    football/login and make a post request with the username and password
+    football/login and make a post request with the username and password in format json
 
     Then copy the token and go to the authentication section 
     (if you are looking at the api docs) select Token, then 
@@ -47,7 +47,7 @@ def Login(request):
 
 @api_view(['POST'])
 def Signup(request):
-    """To register in the api please make a post request to football/signup 
+    """To register in the api please make a post request to football/signup  in format json
        with the following fields: username, password and email.
 
        This will return your authorization token, after that please login at football/login
