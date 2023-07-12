@@ -1,5 +1,5 @@
 amqp==5.1.1
-asgiref @ 
+asgiref 
 billiard==4.1.0
 Brotli==1.0.9
 celery==5.3.1
