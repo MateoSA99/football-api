@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from football import views
 from rest_framework.documentation import include_docs_urls
+from django.shortcuts import redirect
+
+def redirect_to_football(request):
+    return redirect('/football/signup')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
     path('docs/', include_docs_urls(title='My API title')),
+    path("",redirect_to_football),
 
     path('football/', include('football.urls')),
 ]

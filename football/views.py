@@ -48,7 +48,15 @@ def Login(request):
 @api_view(['POST'])
 def Signup(request):
     """To register in the api please make a post request to football/signup  in format json
-       with the following fields: username, password and email.
+       with the following fields: username, password and email. Make sure than the email is from gmail
+       to receive the confirmation email when you login and signup.
+
+       Example:
+       {
+            "username":"JhonDoe",
+            "password":"foo1234",
+            "email":"your_email@gmail.com"
+        }
 
        This will return your authorization token, after that please login at football/login
 
