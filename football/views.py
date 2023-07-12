@@ -19,9 +19,8 @@ def Login(request):
     and get the token, for this it is necessary to go to 
     football/login and make a post request with the username and password in format json
 
-    Then copy the token and go to the authentication section 
-    (if you are looking at the api docs) select Token, then 
-    in scheme write token and then paste the token.
+    Then copy the token and go to the football/docs and find the authorization section 
+    select Token, then in scheme write token and then paste the token.
 
     If you make the request from postman make sure that in the headers you 
     pass the information as follows:
