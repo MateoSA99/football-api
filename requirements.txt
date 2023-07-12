@@ -1,5 +1,5 @@
 amqp==5.1.1
-asgiref @ file:///work/ci_py311/asgiref_1676843199969/work
+asgiref 
 billiard==4.1.0
 Brotli==1.0.9
 celery==5.3.1
@@ -12,7 +12,7 @@ click-repl==0.3.0
 coreapi==2.3.3
 coreschema==0.0.4
 dj-database-url==2.0.0
-Django @ file:///work/ci_py311/django_1676851927387/work
+Django 
 djangorestframework==3.14.0
 gunicorn==20.1.0
 idna==3.4
@@ -29,7 +29,7 @@ pytz==2023.3
 redis==4.6.0
 requests==2.31.0
 six==1.16.0
-sqlparse @ file:///work/ci_py311/sqlparse_1676828845822/work
+sqlparse 
 typing_extensions==4.7.1
 tzdata==2023.3
 uritemplate==4.1.1
