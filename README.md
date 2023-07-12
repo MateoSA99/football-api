@@ -37,6 +37,7 @@ para iniciar la aplicación.
 Note que al iniciar sesión o registrarse en la api recibirá un email de confirmación.
 
 `4.` Navegue libremente por la api
+`5.` Consulte la app desplegada **https://footballapims.onrender.com/football/signup**
 
 
 
