@@ -1,6 +1,6 @@
 from django.urls import path,include
 from rest_framework.routers import DefaultRouter
-from football.views import TeamViewSet, PlayerViewSet, TeamsPerCountryViewSet, PlayersByTeamViewSet
+from .views import TeamViewSet, PlayerViewSet, TeamsPerCountryViewSet, PlayersByTeamViewSet, Login, Signup
 
 router = DefaultRouter()
 router.register(r'teams',TeamViewSet, basename='teams')
@@ -11,7 +11,10 @@ router.register(r'teams/country/(?P<country>\w+)', TeamsPerCountryViewSet, basen
 
 
 urlpatterns = [
+    path('login', Login),
+    path('signup', Signup),
     path('', include(router.urls)),
+
     
 ]
 

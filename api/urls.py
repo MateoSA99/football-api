@@ -20,8 +20,7 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('login', views.Login),
-    re_path('signup', views.Signup),
+    
     path('docs/', include_docs_urls(title='My API title')),
 
     path('football/', include('football.urls')),
